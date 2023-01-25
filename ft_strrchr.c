@@ -6,7 +6,7 @@
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 16:39:29 by lucortin          #+#    #+#             */
-/*   Updated: 2023/01/25 18:26:07 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/01/25 19:30:49 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ char	*ft_strrchr(const char *cad, int c)
 int    main(void)
 {
     char sss[] = "hola";
-    printf ("%c\n", ft_strrchr(sss, 'o'));
+    printf ("%s\n", ft_strrchr(sss, 'o'));
     return (0);
 }
