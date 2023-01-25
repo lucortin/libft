@@ -1,44 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/24 14:15:16 by lucortin          #+#    #+#             */
-/*   Updated: 2023/01/25 15:46:02 by lucortin         ###   ########.fr       */
+/*   Created: 2023/01/25 16:39:29 by lucortin          #+#    #+#             */
+/*   Updated: 2023/01/25 18:26:07 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strchr(const char *cad, int c)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while ((s1[i] || s2[i]) && i < n)
+	while (cad[i])
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		if (cad[i] == (char)c)
+			return ((char *) cad + i);
 		i++;
 	}
 	return (0);
 }
 
 /*#include <stdio.h>
-int main(void)
+//return ((char *) &cad[i]);
+int    main(void)
 {
-	int	s = 3;
-	char	a[5] = "Halo";
-	char	b[6] = "Adios";
-	char	c[6] = "Adios";
-	char	d[5] = "Hala";
-
-	printf("%d, ",  ft_strncmp(a, b, s));
-	printf("%d, ",  ft_strncmp(b, a, s));
-	printf("%d, ",  ft_strncmp(b, c, s));
-	printf("%d, ",  ft_strncmp(a, d, s));
-	printf("%d",  ft_strncmp(d, a, s));
-	return(0);
+    char sss[] = "hola";
+    printf ("hola: %p, ola: %p\n", sss, ft_strchr(sss, 'o'));
+    return (0);
 }*/
