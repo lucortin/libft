@@ -6,7 +6,7 @@
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:06:13 by lucortin          #+#    #+#             */
-/*   Updated: 2023/01/18 15:18:46 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/01/25 15:40:56 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,3 +44,32 @@ int main (void)
     printf("%s", (unsigned char*)p);
     return(0);
 }
+/*#include <unistd.h>
+
+ void *ft_memset(void *s, int c, int n)
+{
+    int    j;
+    char r[] = "\0";
+
+    j = 0;
+
+    while (j <= n)
+    {
+        r[j] = c;
+        j++;
+    }
+    s = &r[];
+	    printf("%d ", *s);
+    return (0);
+}
+
+#include <stdio.h>
+int main(void)
+{
+    int s = 5;
+    int d = 'a';
+    void *b;
+    ft_memset(b, d, s);
+
+    return (0);
+}*/

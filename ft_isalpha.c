@@ -6,7 +6,7 @@
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:13:06 by lucortin          #+#    #+#             */
-/*   Updated: 2023/01/18 15:18:24 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/01/25 15:07:26 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int	ft_isalpha(int c)
 {
-
 	if (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))
 	{
 		write (1, "it is alpha\n", 12);
@@ -25,7 +24,6 @@ int	ft_isalpha(int c)
 		write (1, "it is not alpha\n", 16);
 		return (0);
 	}
-		
 }
 
 /*int main (void)

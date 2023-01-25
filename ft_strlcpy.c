@@ -6,13 +6,13 @@
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 17:44:39 by lucortin          #+#    #+#             */
-/*   Updated: 2023/01/25 13:37:09 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/01/25 15:37:32 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-size_t ft_strlcpy(char *dest, const char *src, size_t size )
+size_t	ft_strlcpy(char *dest, const char *src, size_t size )
 {
 	size_t	length;
 	size_t	i;
@@ -32,7 +32,7 @@ size_t ft_strlcpy(char *dest, const char *src, size_t size )
 	return (length);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main(void)
 {
 	int n = 6; //destiny size
@@ -42,4 +42,4 @@ int main(void)
 	ft_strlcpy(b, a, n);
 	printf("%s\n", b);
 	return (0);
-}
+}*/
