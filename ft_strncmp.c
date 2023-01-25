@@ -3,26 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucortin <lucortin@student.42madrid>       +#+  +:+       +#+        */
+/*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 14:15:16 by lucortin          #+#    #+#             */
-/*   Updated: 2022/11/24 16:28:13 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/01/25 14:04:49 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while ((s1[i] || s2[i]) && i < n)
 	{
-		if (s1[i] > s2[i])
-			return (1);
-		else if (s1[i] < s2[i])
-			return (-1);
+	if (s1[i] != s2[i])
+		return (s1[i] - s2[i]);
 		i++;
 	}
 	return (0);
