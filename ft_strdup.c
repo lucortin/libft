@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 11:14:56 by lucortin          #+#    #+#             */
-/*   Updated: 2023/01/26 13:02:22 by lucortin         ###   ########.fr       */
+/*   Created: 2023/01/26 13:19:32 by lucortin          #+#    #+#             */
+/*   Updated: 2023/01/26 13:36:36 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-//#include <libft.a>
+#include <stdlib.h>
+#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -23,24 +24,27 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strrchr(const char *cad, int c)
+char *ft_strdup(const char *s)
 {
+	int	i;
 	int	len;
+	char *s2;
 
-	len = ft_strlen ((char *) cad);
-	while (len > 0)
+	i = 0;
+	len = ft_strlen((char *) s);
+	s2 = malloc(sizeof(char) * len);
+	while(s[i])
 	{
-		if (cad[len] == (char)c)
-			return ((char *) &cad[len]);
-		len--;
+		s2[i] = s[i];
+		i++;
 	}
-	return (0);
+
+	return (s2);
 }
 
-/*#include <stdio.h>
-int    main(void)
+int	main(void)
 {
-    char sss[] = "holoa";
-    printf ("%s\n", ft_strrchr(sss, 'b'));
-    return (0);
-}*/
+	char str[] = "socorro";
+	printf ("%s", ft_strdup(str));
+	return (0);
+}

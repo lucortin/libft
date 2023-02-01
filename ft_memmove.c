@@ -6,30 +6,41 @@
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 16:12:23 by lucortin          #+#    #+#             */
-/*   Updated: 2023/01/18 16:55:16 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/02/01 19:15:29 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *memmove(void *dest, const void *src, size_t n)
+#include <unistd.h>
+
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-    size_t i;
-    i = 0;
-    while (i < n)
-    {
-         ((unsigned char*)dest)[i] = ((unsigned char*)src)[i];
-         i++;
-    }
-    SIN ACABAR
-    return(dest);
+	unsigned char		*d;
+	const unsigned char	*s;
+
+	d = (unsigned char *)dst;
+	s = (const unsigned char *)src;
+	if (dst < src)
+	{
+		while (n--)
+			*d++ = *s++;
+	}
+	else
+	{
+		s += n - 1;
+		d += n - 1;
+		while (n--)
+			*d-- = *s--;
+	}
+	return (dst);
 }
 
-int main(void)
-{
-    size_t x = 4;
-    char a[] = "carecola";
-    char b[] = "hola";
-    
-    ft_memset(a, b, x);
-    printf("%s", a);
-    return(0);
-}
+// #include <stdio.h>
+// int main (void)
+// {
+// 	// char	a[] = "carecola                      ";
+// 	char	a[] = "0123456789abcdefg";
+// 	ft_memmove(a, a + 3, 5);
+// 	ft_memmove(a + 3, a, 5);
+// 	printf("%s\n", a);
+//     return (0);
+// }

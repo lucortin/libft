@@ -1,46 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 11:14:56 by lucortin          #+#    #+#             */
-/*   Updated: 2023/01/26 13:02:22 by lucortin         ###   ########.fr       */
+/*   Created: 2023/01/26 13:47:22 by lucortin          #+#    #+#             */
+/*   Updated: 2023/01/26 14:04:48 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-//#include <libft.a>
 
-int	ft_strlen(char *str)
+void *ft_memchr(const void *str, int c, size_t n)
 {
-	int	i;
-
+	size_t	i;
 	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strrchr(const char *cad, int c)
-{
-	int	len;
-
-	len = ft_strlen ((char *) cad);
-	while (len > 0)
+	while (i <= n)
 	{
-		if (cad[len] == (char)c)
-			return ((char *) &cad[len]);
-		len--;
+		if ((unsigned char *) str[i] == (unsigned char *) c)
+			return (str[i]);
+		i++;
 	}
 	return (0);
 }
 
-/*#include <stdio.h>
-int    main(void)
+int	main (void)
 {
-    char sss[] = "holoa";
-    printf ("%s\n", ft_strrchr(sss, 'b'));
-    return (0);
-}*/
+	char s[] = "abcdefg";
+	int a = 'c';
+	printf ("%s", ft_memchr(s, a, 4));
+	return (0);
+}
