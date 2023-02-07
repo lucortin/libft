@@ -6,7 +6,7 @@
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 11:19:23 by lucortin          #+#    #+#             */
-/*   Updated: 2023/01/26 13:05:29 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/02/07 16:16:33 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,17 +34,17 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	return (0);
 }
 
-#include <stdio.h>
-int	main(void)
-{
-	char	a[] = "supercalifragilissticoespialidoso";
-	char	b[] = "fragil";
-	char	c[] = "catata";
-	char 	d[] = "tico";  
-	char 	e[] = "";
-	printf("%s ", ft_strnstr (a, e, 4));
-	printf("%s ", ft_strnstr (a, b, 4));
-	printf("%s ", ft_strnstr (a, c, 6));
-	printf("%s", ft_strnstr (a, d, 4));
-	return (0);
-}
+// #include <stdio.h>
+// int	main(void)
+// {
+// 	char	a[] = "supercalifragilissticoespialidoso";
+// 	char	b[] = "fragil";
+// 	char	c[] = "catata";
+// 	char 	d[] = "tico";  
+// 	char 	e[] = "";
+// 	printf("%s ", ft_strnstr (a, e, 4));
+// 	printf("%s ", ft_strnstr (a, b, 4));
+// 	printf("%s ", ft_strnstr (a, c, 6));
+// 	printf("%s", ft_strnstr (a, d, 4));
+// 	return (0);
+// }

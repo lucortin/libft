@@ -1,49 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 13:19:32 by lucortin          #+#    #+#             */
-/*   Updated: 2023/02/07 16:15:59 by lucortin         ###   ########.fr       */
+/*   Created: 2023/02/07 12:57:43 by lucortin          #+#    #+#             */
+/*   Updated: 2023/02/07 13:48:24 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
 
-int	ft_strlen(char *str)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	i;
+	size_t				c;
+	const unsigned char	*e;
+	const unsigned char	*d;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strdup(const char *s)
-{
-	int		i;
-	int		len;
-	char	*s2;
-
-	i = 0;
-	len = ft_strlen((char *) s);
-	s2 = malloc(sizeof(char) * len);
-	while (s[i])
+	d = (unsigned char *)s1;
+	e = (unsigned char *)s2;
+	c = 0;
+	while (c < n)
 	{
-		s2[i] = s[i];
-		i++;
+		if (d[c] == e[c])
+			c++;
+		if (c == n)
+			return (0);
+		if (d[c] != e[c])
+			return (d[c] - e[c]);
 	}
-	return (s2);
+	return (0);
 }
 
+// #include <stdio.h>
 // int	main(void)
 // {
-// 	char str[] = "socorro";
-// 	printf ("%s", ft_strdup(str));
+// 	char a[] = "abcdefgn";
+// 	char b[] = "abcdefg3";
+// 	printf("%d\n", ft_memcmp(a, b, 7));
 // 	return (0);
 // }

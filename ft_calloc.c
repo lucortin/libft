@@ -1,49 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 13:19:32 by lucortin          #+#    #+#             */
-/*   Updated: 2023/02/07 16:15:59 by lucortin         ###   ########.fr       */
+/*   Created: 2023/02/07 13:49:40 by lucortin          #+#    #+#             */
+/*   Updated: 2023/02/07 16:09:39 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <string.h>
 #include <stdlib.h>
-#include <stdio.h>
 
-int	ft_strlen(char *str)
+void	ft_bzero(void *s, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	while (i < n)
+		((unsigned char *)s)[i++] = '\0';
 }
 
-char	*ft_strdup(const char *s)
+void	*ft_calloc(size_t count, size_t size)
 {
-	int		i;
-	int		len;
-	char	*s2;
+	void	*room;
 
-	i = 0;
-	len = ft_strlen((char *) s);
-	s2 = malloc(sizeof(char) * len);
-	while (s[i])
-	{
-		s2[i] = s[i];
-		i++;
-	}
-	return (s2);
+	room = malloc(count * size);
+	if (room == NULL)
+		return (NULL);
+	ft_bzero(room, (count * size));
+	return (room);
 }
-
-// int	main(void)
-// {
-// 	char str[] = "socorro";
-// 	printf ("%s", ft_strdup(str));
-// 	return (0);
-// }

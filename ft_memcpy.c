@@ -6,7 +6,7 @@
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:42:42 by lucortin          #+#    #+#             */
-/*   Updated: 2023/02/01 16:14:06 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/02/07 16:10:41 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 //     // printf("%s\n", a);
 //     // memmove(a + 3, a, 5);
 //     // printf("%s\n", a);
-	
+
 // 	printf("%s\n", memmove(a + 3, a, 5));
 // 	printf("%s\n", memcpy(a + 3, a, 5));
 // 	printf("%s\n", ft_memcpy(a + 3, a, 5));
