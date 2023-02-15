@@ -6,7 +6,7 @@
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 15:47:07 by lucortin          #+#    #+#             */
-/*   Updated: 2023/02/15 16:37:47 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/02/15 18:25:03 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+char 	*ft_strtrim(char const *s1, char const *set);
 #endif

@@ -6,7 +6,7 @@
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 16:53:56 by lucortin          #+#    #+#             */
-/*   Updated: 2023/02/15 16:35:15 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/02/15 17:15:00 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,26 +26,26 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	h = 0;
 	s1size = 0;
 	s2size = 0;
-		while (s1[s1size])
-			s1size++;
-		while (s2[s2size])
-			s2size++;
-		s3 = malloc(sizeof(char) * (s1size + s2size + 1));
-		while (h < s1size)
-			s3[i++] = s1[h++];
-		h = 0;
-		while (h < s2size)
-			s3[i++] = s2[h++];
-		s3[i] = '\0';
-		return (s3);
+	while (s1[s1size])
+		s1size++;
+	while (s2[s2size])
+		s2size++;
+	s3 = malloc(sizeof(char) * (s1size + s2size + 1));
+	while (h < s1size)
+		s3[i++] = s1[h++];
+	h = 0;
+	while (h < s2size)
+		s3[i++] = s2[h++];
+	s3[i] = '\0';
+	return (s3);
 	return (0);
 }
 
-#include <stdio.h>
-int	main(void)
-{
-	char a[] = "hola";
-	char b[] = "caracola";
-	printf("%s", ft_strjoin(a, b));
-	return (0);
-}
+// #include <stdio.h>
+// int	main(void)
+// {
+// 	char a[] = "hola";
+// 	char b[] = "caracola";
+// 	printf("%s", ft_strjoin(a, b));
+// 	return (0);
+// }
