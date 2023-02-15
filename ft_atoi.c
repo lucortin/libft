@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucortin <lucortin@student.42madrid>       +#+  +:+       +#+        */
+/*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 17:50:06 by lucortin          #+#    #+#             */
-/*   Updated: 2023/01/25 19:25:43 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/02/15 15:53:18 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include <unistd.h>
+#include "libft.h"
 
 int	ft_atoi(char *str)
 {

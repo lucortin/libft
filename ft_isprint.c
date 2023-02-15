@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucortin <lucortin@student.42madrid>       +#+  +:+       +#+        */
+/*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 19:34:26 by lucortin          #+#    #+#             */
-/*   Updated: 2022/11/21 14:14:10 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/02/15 16:19:47 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include <unistd.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

@@ -6,12 +6,13 @@
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 16:21:37 by lucortin          #+#    #+#             */
-/*   Updated: 2023/02/07 16:50:52 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/02/15 16:34:47 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include <unistd.h>
 #include <stdlib.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

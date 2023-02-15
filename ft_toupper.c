@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucortin <lucortin@student.42madrid>       +#+  +:+       +#+        */
+/*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 16:14:08 by lucortin          #+#    #+#             */
-/*   Updated: 2023/01/25 16:22:02 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/02/15 16:27:57 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include <unistd.h>
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

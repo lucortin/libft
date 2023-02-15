@@ -6,11 +6,12 @@
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 13:47:22 by lucortin          #+#    #+#             */
-/*   Updated: 2023/02/07 16:10:20 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/02/15 16:20:05 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include <unistd.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {

@@ -6,22 +6,13 @@
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:06:13 by lucortin          #+#    #+#             */
-/*   Updated: 2023/01/25 15:48:28 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/02/15 16:22:45 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include <unistd.h>
+#include "libft.h"
 
-/**
- * It sets the first len bytes of the memory area pointed 
- to by b to the specified value c.
- * 
- * @param b This is the pointer to the memory area to be filled.
- * @param c The character to fill the memory with.
- * @param len the number of bytes to fill
- * 
- * @return A pointer to the beginning of the memory area b.
- */
 void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t	i;

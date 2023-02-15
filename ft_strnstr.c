@@ -6,11 +6,12 @@
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 11:19:23 by lucortin          #+#    #+#             */
-/*   Updated: 2023/02/07 16:16:33 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/02/15 16:26:22 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include <unistd.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {

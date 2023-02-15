@@ -6,11 +6,13 @@
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:13:03 by lucortin          #+#    #+#             */
-/*   Updated: 2023/01/25 15:32:45 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/02/15 16:18:23 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
 	if (0 <= c && c <= 127)
 	{

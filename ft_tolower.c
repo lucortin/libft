@@ -6,11 +6,12 @@
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 16:14:08 by lucortin          #+#    #+#             */
-/*   Updated: 2023/01/25 16:23:40 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/02/15 16:26:55 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include <unistd.h>
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

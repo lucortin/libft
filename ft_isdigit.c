@@ -6,11 +6,12 @@
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:12:47 by lucortin          #+#    #+#             */
-/*   Updated: 2023/01/25 15:35:32 by lucortin         ###   ########.fr       */
+/*   Updated: 2023/02/15 16:18:56 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include <unistd.h>
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

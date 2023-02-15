@@ -1,36 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucortin <lucortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/18 15:12:50 by lucortin          #+#    #+#             */
-/*   Updated: 2023/02/15 16:15:22 by lucortin         ###   ########.fr       */
+/*   Created: 2023/02/15 15:11:13 by lucortin          #+#    #+#             */
+/*   Updated: 2023/02/15 16:13:26 by lucortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <unistd.h>
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
+	int	r;
 
-	i = 0;
-	while (i < n)
-		((unsigned char *)s)[i++] = '\0';
+	if (nb == -2147483648)
+		write (1, &"-2147483648", 11);
+	else
+	{
+		if (n < 0)
+		{
+			n *= -1;
+			write (1, "-", 1);
+		}
+		if (n >= 10)
+		{
+			r = n % 10;
+			n = n / 10;
+			ft_putnbr_fd(n);
+			ft_putchar_fd(r);
+		}
+		else
+			ft_putchar_fd(n);;
+	}
 }
 
-/*#include <stdio.h>
-int main (void)
+int	main(void)
 {
-    size_t x = 3;
-    char *p;
-    char a[] = "caracola";
-    p = &a;
-
-    ft_bzero(p, x);
-    printf("%s", (unsigned char*)&p[3]);
-    return(0);
-}*/
+	
+	return (0)
+}
